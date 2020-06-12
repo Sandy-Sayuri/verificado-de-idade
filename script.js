@@ -53,7 +53,7 @@ function verificar(){
         else{
             //vampiro
         }
-       }
+     }
        res.style.textAlign='center'
        res.innerHTML=`Detectamos ${gênero} com ${idade} anos`
     }

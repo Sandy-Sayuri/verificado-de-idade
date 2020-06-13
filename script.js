@@ -28,7 +28,7 @@ function verificar(){
            }
            else if(idade>=21 && idade<50){
                //adulto
-               img.setAttribute('src','adultoH.jpg')
+               img.setAttribute('src','adultoH.png')
            }
            else if(idade>=50 && idade<200){
                //velho
@@ -51,7 +51,7 @@ function verificar(){
         }
         else if(idade>=10 && idade<21){
             //adolecente
-            img.setAttribute('src','jovemM.jpg')
+            img.setAttribute('src','jovem.M.jpg')
         }
         else if(idade>=21 && idade<50){
             //adulto

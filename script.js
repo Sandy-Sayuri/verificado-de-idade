@@ -8,65 +8,67 @@ function verificar(){
     }
     else{
         var fsex=document.getElementsByName('radsex')
-        var idade=0
-       var gênero=""
-       var img=document.createElement("img")
-       img.setAttribute('id','foto')
-       if(fsex[0].checked){
-           gênero="Homen"
-           if(idade==0){
-               //bebe
-               img.setAttribute('src','bebe H.jpg')
-           }
-           else if(idade>=3 && idade<10){
-               //criança
-               img.setAttribute('src','criançaH.jpg')
-           }
-           else if(idade>=10 && idade<21){
-               //adolecente
-               img.setAttribute('src','jovemH.jpg')
-           }
-           else if(idade>=21 && idade<50){
-               //adulto
-               img.setAttribute('src','adultoH.jpg')
-           }
-           else if(idade>=50 && idade<200){
-               //velho
-               img.setAttribute('src','velhoH.jpg')
-           }
-           else{
-               //vampiro
-               img.setAttribute('src','vampiroH.jpg')
-           }
-       }
-       else if(fsex[1].checked){
-        gênero='Mulher'
-        if(idade>=0 && idade<3){
-            //bebe
-            img.setAttribute('src','bebeM.jpg')
+        var idade=ano-Number(fano.value)
+        var genero=""
+        var img=document.createElement('img')
+        img.setAttribute('id','foto')
+        if(fsex[0].checked){
+            genero="Homen"
+            if(idade>=0 && idade<4){
+                //bebe
+                img.setAttribute('src','bebe H.jpg')
+            }
+            else if (idade>=4 && idade<10){
+                //crinça
+                img.setAttribute('src','criançaH.jpg')
+            }
+            else if(idade>=10 && idade<20){
+                //jovem
+                img.setAttribute('src','jovemH.jpg')
+            }
+            else if (idade>=20 && idade<50){
+                //adulto
+                img.setAttribute('src','adultoH.png')
+            }
+            else if(idade>=50 && idade<100){
+                //velho
+                img.setAttribute('src','velhoH.jpg')
+            }
+            else{
+                //vampiro
+                img.setAttribute('src','vampiroH.jpg')
+            }
         }
-        else if(idade>=3 && idade<10){
-            //criança
-            img.setAttribute('src','criançaM.jpg')
+        if(fsex[1].checked){
+            genero="Mulher"
+            if(idade>=0 && idade<4){
+                //bebe
+                img.setAttribute('src','bebeM.jpg')
+            }
+            else if (idade>=4 && idade<10){
+                //crinça
+                img.setAttribute('src','criançaM.jpg')
+            }
+            else if(idade>=10 && idade<20){
+                //jovem
+                img.setAttribute('src','jovemM.jpg')
+            }
+            else if (idade>=20 && idade<50){
+                //adulto
+                img.setAttribute('src','adultoM.png')
+            }
+            else if(idade>=50 && idade<100){
+                //velho
+                img.setAttribute('src','velhoM.jpg')
+            }
+            else{
+                //vampiro
+                img.setAttribute('src','vampiroM.jpg')
+            }
         }
-        else if(idade>=10 && idade<21){
-            //adolecente
-            img.setAttribute('src','jovemM.jpg')
-        }
-        else if(idade>=21 && idade<50){
-            //adulto
-            img.setAttribute('src','adultoM.jpg')
-        }
-        else if(idade>=50 && idade<200){
-            //velho
-            img.setAttribute('src','velhoM.jpg')
-        }
-        else{
-            //vampiro
-            img.setAttribute('src','vampiroM.jpg')
-        }
-     }
-       res.style.textAlign='center'
-       res.innerHTML=`Detectamos ${gênero} com ${idade} anos`
+        res.innerHTML=` Dectamos ${genero} com ${idade} anos` 
+        res.innerHTML+="<br>"
+        res.appendChild(img)  
     }
+    
 }
